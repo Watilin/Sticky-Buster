@@ -1,0 +1,38 @@
+{
+
+  "manifest_version": 2,
+
+  "name"         : "Sticky Buster",
+  "version"      : "1.0",
+  "description"  : "A tool to pick and un-sticky any sticky bar on websites.",
+  "author"       : "Watilin",
+  "homepage_url" : "https://github.com/Watilin/Sticky-Buster/#readme",
+
+  "applications" : {
+    "gecko": {
+      "id"                 : "sticky-buster@kergoz-panic.fr",
+      "strict_min_version" : "57.0"
+    }
+  },
+
+  "icons": {
+    "48" : "icons/stickybuster.svg",
+    "96" : "icons/stickybuster.svg"
+  },
+
+  "browser_action": {
+    "browser_style" : true,
+    "default_icon"  : "icons/stickybuster.svg",
+    "default_title" : "Sticky Buster",
+    "default_popup" : "popup/popup.html"
+  },
+
+  "content_scripts": [{
+    "matches" : [ "<all_urls>" ],
+    "js"      : [ "messaging.js", "content/content.js" ],
+    "css"     : [ "content/content.css" ]
+  }],
+
+  "permissions": [ "storage" ]
+
+}

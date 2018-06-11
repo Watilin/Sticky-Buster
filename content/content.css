@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+#sticky-buster-overlay {
+  position: fixed;
+  z-index: 999999999;
+  border-radius: 16px;
+  background: repeating-linear-gradient(135deg,
+    rgba(0, 200, 215, 0.60) 0px, rgba(0, 200, 215, 0.60) 21.5px,
+    transparent 22.5px, transparent 44px,
+    rgba(0, 200, 215, 0.60) 45px, rgba(0, 200, 215, 0.60) 66.5px,
+    transparent 67.5px, transparent 89px,
+    rgba(0, 200, 215, 0.60) 90px);
+  pointer-events: none;
+}
+
+#sticky-buster-tooltip {
+  position: fixed;
+  z-index: 999999999;
+  font: normal 13px/120%
+    "Segoe UI", "San Francisco", "Ubuntu", "Fira Sans", "Roboto", sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  padding: 1px 2px;
+  background: #ededf0;
+  color: #0c0c0d;
+  border: solid thin #d7d7db;
+  border-radius: 2px;
+  pointer-events: none;
+}
